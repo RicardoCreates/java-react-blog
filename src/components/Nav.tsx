@@ -1,13 +1,14 @@
 import styled from 'styled-components';
+import {Link} from "react-router-dom";
 
 export default function Nav(){
     return (
         <>
             <NavStyled>
-                <a href="#">Startseite</a>
-                <a href="#">Über mich</a>
-                <a href="#">Reiseziele</a>
-                <a href="#">Kontakt</a>
+                <Link to="/">Startseite</Link>
+                <Link to="/about">Über mich</Link>
+                <Link to="#">Reiseziele</Link>
+                <Link to="#">Kontakt</Link>
             </NavStyled>
         </>
     )
