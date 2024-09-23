@@ -30,6 +30,7 @@ function App() {
                                             key={index}
                                             headline={article.headline}
                                             description={article.description}
+                                            imageSrc={article.imageSrc}
                                         />
                                     ))}
                                 </>

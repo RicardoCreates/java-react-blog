@@ -1,6 +1,7 @@
 export type ArticleType = {
     headline: string,
     description: string,
+    imageSrc?: string,
 }
 
 
@@ -8,6 +9,7 @@ const articles: ArticleType[] = [
     {
         headline: "Mein letzter Trip nach Malta",
         description: "Malta war einfach atemberaubend! Die Strände, die Kultur und die Natur sind wirklich einzigartig.",
+        imageSrc: "/gozo.jpeg",
     },
     {
         headline: "Entdecke die Schönheit von Gozo",
