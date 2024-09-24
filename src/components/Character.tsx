@@ -6,16 +6,17 @@ export default function Character() {
 
     const params = useParams()
 
-    const id: string | undefined = params.id
+    const id: string = params.id ?? "1"
 
-    const foundCharacter = characters.find((character) => character.id == id)
+    const foundCharacter = characters.find((character) => character.id == Number(id))
 
     return (
         <>
+            {foundCharacter ?
             <StyledDiv>
             <h1>{foundCharacter.name}</h1>
             <img src={foundCharacter.image} alt={''}/>
-            </StyledDiv>
+            </StyledDiv> : <h2>not found</h2>}
         </>
     )
 }

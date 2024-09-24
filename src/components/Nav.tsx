@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
-import {characters} from "../assets/Characters.ts";
 
 export default function Nav(){
     return (
