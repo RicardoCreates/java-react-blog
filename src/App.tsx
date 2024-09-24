@@ -3,11 +3,13 @@ import Header from "./components/Header.tsx";
 import GlobalStyles from "./Globalstyles.ts";
 import Nav from "./components/Nav.tsx";
 import Footer from "./components/Footer.tsx";
-
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+// import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Route, Routes} from 'react-router-dom';
 import About from "./About.tsx";
-import ArticleAll from "./components/ArticleAll.tsx";
-import articles from "./assets/data.ts";
+import Startpage from "./components/Startpage.tsx";
+import ArticleCard from "./components/ArticleCard.tsx";
+import Character from "./components/Character.tsx";
+import Nav2 from "./components/Nav2.tsx";
 
 
 function App() {
@@ -21,24 +23,13 @@ function App() {
                 <Nav/>
                 <main>
                     <Routes>
-                        <Route
-                            path="/"
-                            element={
-                                <>
-                                    {articles.map((article, index) => (
-                                        <ArticleAll
-                                            key={index}
-                                            headline={article.headline}
-                                            description={article.description}
-                                            imageSrc={article.imageSrc}
-                                        />
-                                    ))}
-                                </>
-                            }
-                        />
+                        <Route path={"/"} element={<Startpage/>}/>
+                        <Route path={"/article"} element={<ArticleCard/>}/>
                         <Route path="/about" element={<About/>}/>
+                        <Route path={'/character/:id'} element={<Character />} />
                     </Routes>
                 </main>
+                <Nav2/>
                 <Footer/>
             </Router>
         </>

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
+import {characters} from "../assets/Characters.ts";
 
 export default function Nav(){
     return (
@@ -10,6 +11,7 @@ export default function Nav(){
                 <Link to="#">Reiseziele</Link>
                 <Link to="#">Kontakt</Link>
             </NavStyled>
+
         </>
     )
 }
@@ -31,3 +33,5 @@ const NavStyled = styled.div`
     }
   }
 `;
+
+
