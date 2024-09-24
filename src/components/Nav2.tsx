@@ -17,10 +17,11 @@ export default function Nav2(){
 
 const StyledDiv = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
     text-decoration: none;
     color: black;
+    margin: 20px;
 `
 
 const StyledLink = styled(Link)`
